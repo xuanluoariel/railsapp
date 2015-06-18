@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @basic.type %>
+</p>
+
+<p>
+  <strong>Starttime:</strong>
+  <%= @basic.startTime %>
+</p>
+
+<p>
+  <strong>Endtime:</strong>
+  <%= @basic.endTime %>
+</p>
+
+<p>
+  <strong>Timestep:</strong>
+  <%= @basic.timeStep %>
+</p>
+
+<%= link_to 'Edit', edit_basic_path(@basic) %> |
+<%= link_to 'Back', basics_path %>

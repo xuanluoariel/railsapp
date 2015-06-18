@@ -1,0 +1,34 @@
+<%= form_for(@basic) do |f| %>
+  <% if @basic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@basic.errors.count, "error") %> prohibited this basic from being saved:</h2>
+
+      <ul>
+      <% @basic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="row">
+	  <div class="col-md-3 col-sm-2" class="field">
+	    <%= f.label :buildingType %><br>
+	    <%= f.text_field :buildingType %>
+	  </div>
+	  <div class="col-md-3 col-sm-4" class="field">
+	    <%= f.label :startTime %><br>
+	    <%= f.date_select :startTime %>
+	  </div>
+	  <div class="col-md-3 col-sm-4" class="field">
+	    <%= f.label :endTime %><br>
+	    <%= f.date_select :endTime %>
+	  </div>
+	  <div class="col-md-3 col-sm-2" class="field">
+	    <%= f.label :timeStep %><br>
+	    <%= f.number_field :timeStep %>
+	  </div>
+	  </div>
+	<div class="actions">
+	  <%= f.submit %>
+	</div>
+<% end %>

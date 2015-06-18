@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Basics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Starttime</th>
+      <th>Endtime</th>
+      <th>Timestep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @basics.each do |basic| %>
+      <tr>
+        <td><%= basic.type %></td>
+        <td><%= basic.startTime %></td>
+        <td><%= basic.endTime %></td>
+        <td><%= basic.timeStep %></td>
+        <td><%= link_to 'Show', basic %></td>
+        <td><%= link_to 'Edit', edit_basic_path(basic) %></td>
+        <td><%= link_to 'Destroy', basic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basic', new_basic_path %>
