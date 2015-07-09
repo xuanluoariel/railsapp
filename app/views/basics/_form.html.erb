@@ -1,34 +1,40 @@
-<%= form_for(@basic) do |f| %>
-  <% if @basic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@basic.errors.count, "error") %> prohibited this basic from being saved:</h2>
-
-      <ul>
-      <% @basic.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-	<div class="row">
-	  <div class="col-md-3 col-sm-2" class="field">
-	    <%= f.label :buildingType %><br>
-	    <%= f.text_field :buildingType %>
+<%= form_for([@basic, @basic.spaces.build]) do |f| %>
+	<% if @basic.errors.any? %>
+	  <div class="alert alert-warning" role="alert">
+	    <%= "Error:"%> 
+	    <ul>
+	    <% @basic.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
 	  </div>
-	  <div class="col-md-3 col-sm-4" class="field">
-	    <%= f.label :startTime %><br>
-	    <%= f.date_select :startTime %>
-	  </div>
-	  <div class="col-md-3 col-sm-4" class="field">
-	    <%= f.label :endTime %><br>
-	    <%= f.date_select :endTime %>
-	  </div>
-	  <div class="col-md-3 col-sm-2" class="field">
-	    <%= f.label :timeStep %><br>
-	    <%= f.number_field :timeStep %>
-	  </div>
-	  </div>
-	<div class="actions">
-	  <%= f.submit %>
-	</div>
+	<% end %>
+  <form> 
+		<tr>	  
+		  <td>
+		  	<div class="form-group">		    	
+			  	<%= f.text_field :name, class: "form-control" %>
+		    </div>
+		  </td>		  
+		  <td>
+		  	<div class="form-group my_select">
+		  		<%= f.collection_select :spaceType, @basic.space_categories.all, :id, :name, {}, { :multiple => false, :class => 'my_select' } %>	
+		    </div>
+		  </td>		  		  
+		  <td>
+		  	<div class="form-group">		    	
+			  	<%= f.number_field :multiplier, class: "form-control" %>
+		    </div>
+		  </td>		  		  
+		  <td>
+		  	<div class="form-group">		    	
+			  	<%= f.number_field :area, class: "form-control"%>
+		    </div>
+		  </td>		  
+		  <td>
+			  <%= f.submit "New zone" , class: "btn btn-large btn-default" %>
+			</td>
+					
+		</tr>
+	</form>
 <% end %>

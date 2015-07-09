@@ -1,0 +1,25 @@
+<div class = "media">
+	<div class = "media-body">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my_table">
+			<table class = "table table-hover">
+			  <thead>
+			    <tr>
+			      <th>Type      </th>
+			      <th>Percentage </th>
+			      <th colspan="2"></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+				<% space_category.occupants.each_with_index do |occupants, index| %>
+			    <tr>
+			      <td><%= occupant.occupantType %></td>
+			      <td><%= occupant.percentage %></td>
+						<td class = "my_td"><%= link_to 'edit', edit_basic_space_category_occupant_path(@basic, space_category, occupant) %></td>
+			      <td class = "my_td"><%= link_to "Delete", [occupant.space_category.basic, occupant.space_category, occupant], method: :delete, data: { confirm: 'Are you sure?' }%></td>
+			    </tr>
+			  <% end %>
+			  /tbody>
+			</table>
+		</div>
+	</div>
+</div>

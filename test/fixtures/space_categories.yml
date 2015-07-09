@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  area: 9.99
+  density: 9.99
+  basic_id: 
+
+two:
+  name: MyString
+  area: 9.99
+  density: 9.99
+  basic_id: 

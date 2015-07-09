@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  GTWTypical: 2015-06-26 16:19:39
+  GTWStart: 2015-06-26 16:19:39
+  GTWEnd: 2015-06-26 16:19:39
+
+two:
+  name: MyString
+  GTWTypical: 2015-06-26 16:19:39
+  GTWStart: 2015-06-26 16:19:39
+  GTWEnd: 2015-06-26 16:19:39

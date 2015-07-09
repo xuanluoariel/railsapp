@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occupanttype:</strong>
+  <%= @occupant.occupantType %>
+</p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @occupant.percentage %>
+</p>
+
+<p>
+  <strong>Spacecategory:</strong>
+  <%= @occupant.SpaceCategory %>
+</p>
+
+<%= link_to 'Edit', edit_occupant_path(@occupant) %> |
+<%= link_to 'Back', occupants_path %>

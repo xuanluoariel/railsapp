@@ -1,0 +1,20 @@
+<%= form_for([@basic, @space_category, @space_category.occupants.build]) do |f| %>
+  <form> 
+		<tr>	  
+		  <td>
+		  	<div class="form-group">
+		  		<%= f.collection_select :occupantType, @basic.occupant_categories.all, :id, :name, {}, { :multiple => false, :class => 'my_select' } %>	
+		    </div>
+		  </td>		  
+
+		  <td>
+		  	<div class="form-group">		    	
+			  	<%= f.number_field :percentage, class: "form-control" %>
+		    </div>
+		  </td>		  		    
+		  <td>
+			  <%= f.submit "Add" , class: "btn btn-large btn-default" %>
+			</td>					
+		</tr>
+	</form>
+<% end %>

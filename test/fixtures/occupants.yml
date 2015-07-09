@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  occupantType: MyString
+  percentage: 1
+  SpaceCategory_id: 
+
+two:
+  occupantType: MyString
+  percentage: 1
+  SpaceCategory_id: 

@@ -1,0 +1,11 @@
+<%= form_tag(:controller => :basics, :action => :add_zone, :method => :post, :id=> @basic.id) do -%>
+  <% @basic.spaces.each do |space| %>
+	  <tr>
+	    <td><%= text_field_tag("space_name#{space.id}", space.name)%></td>
+	    <td><%= select_tag("space_type#{space.id}", options_for_select(@basic.space_categories.all))%></td>
+	    <td><%= text_field_tag("space_multiplier#{space.id}", space.multiplier)%></td>
+	    <td><%= text_field_tag("space_area#{space.id}", space.area)%></td>
+	    <td><%= submit_tag "Delete #{space.id}" %></td>
+	  </tr>
+	<% end %>
+<% end %>

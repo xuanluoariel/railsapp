@@ -1,0 +1,105 @@
+<div class="row my_row">
+	<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+		<div class="page-header table_header">
+			<h4>Event</h4>
+		</div>			
+		<div class = "media">
+			<div class = "media-body">
+				<table class = "table table-hover">
+				  <thead>
+				    <tr>
+				    	<th>Event</th>
+				      <th>Typical Time</th>
+				      <th>Start Time</th>
+				      <th>End Time</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<td>Arrival</td>
+				      <td><%= occupant_category.ATypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.AStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.AEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Work morning</td>
+				      <td><%= occupant_category.WMTypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.WMStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.WMEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Go to lunch</td>
+				      <td><%= occupant_category.GTLTypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.GTLStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.GTLEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Back from lunch</td>
+				      <td><%= occupant_category.BFLTypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.BFLStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.BFLEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Work afternoon</td>
+				      <td><%= occupant_category.WATypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.WAStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.WAEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Departure</td>
+				      <td><%= occupant_category.DTypical.strftime("%I:%M %P") %></td>		  		  
+						  <td><%= occupant_category.DStart.strftime("%I:%M %P") %></td>
+						  <td><%= occupant_category.DEnd.strftime("%I:%M %P") %></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+		<div class="page-header table_header">
+			<h4>Space occupancy</h4>
+		</div>
+		<div class = "media">
+			<div class = "media-body">
+				<table class = "table table-hover">
+				  <thead>
+				    <tr>
+				    	<th>Event</th>
+				      <th>Percent time</th>
+				      <th>Duration</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<td>Own Office</td>
+				      <td><%= occupant_category.ownPercent %></td>		  		  
+						  <td><%= occupant_category.ownDuration.strftime("%I:%M") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Other Office</td>
+				      <td><%= occupant_category.otherPercent %></td>		  		  
+						  <td><%= occupant_category.otherDuration.strftime("%I:%M") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Meeting room</td>
+				      <td><%= occupant_category.meetingPercent %></td>		  		  
+						  <td><%= occupant_category.meetingDuration.strftime("%I:%M") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Auxiliary</td>
+				      <td><%= occupant_category.auxPercent %></td>		  		  
+						  <td><%= occupant_category.auxDuration.strftime("%I:%M") %></td>
+				    </tr>
+				    <tr>
+				  		<td>Outdoor</td>
+				      <td><%= occupant_category.outPercent %></td>		  		  
+						  <td><%= occupant_category.outDuration.strftime("%I:%M") %></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

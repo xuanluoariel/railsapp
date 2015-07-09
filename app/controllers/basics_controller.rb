@@ -1,63 +1,62 @@
 class BasicsController < ApplicationController
-  before_action :set_basic, only: [:show, :edit, :update, :destroy]
-
-  # GET /basics
-  # GET /basics.json
-  def index
-    @basics = Basic.all
-  end
-
-  # GET /basics/1
-  # GET /basics/1.json
-  def show
-  end
-
-  # GET /basics/new
-  def new
-    @basic = Basic.new
-  end
+  before_action :set_basic
 
   # GET /basics/1/edit
   def edit
   end
+  
+  def update_zone
+    @basic.spaces.each do |s|
+      s.name = params["space_name#{s.id}"]
+      s.spaceType = params["space_spaceType#{s.id}"]
+      s.multiplier = params["space_multiplier#{s.id}"]
+      s.area = params["space_area#{s.id}"]
+      if not s.save
+        s.errors.each do |attr, msg|
+          @basic.errors["Space #{s.id}: #{attr}"]= msg
+        end
+      end
+    end
+
+    if params[:commit] == "Add new zone"
+      space = Space.new
+      space.basic = @basic
+      number = 0
+      while true
+        s = Space.find_by_name("Zone #{number+1}")
+        if s == nil
+          break
+        else
+          number += 1 
+        end
+      end
+      space.name = "Zone #{number+1}"
+      space.spaceType = "Office"
+      space.multiplier = 1
+      space.area = 10
+      if not space.save
+        space.errors.each do |attr, msg|
+          @basic.errors["Space #{space.id}: #{attr}"]= msg
+        end
+      end
+      @basic.spaces.push(space)
+      @basic.save
+    end
+
+    respond_to do |format|
+      format.html {  render :action=>:edit }
+    end
+  end
 
   # POST /basics
-  # POST /basics.json
   def create
     @basic = Basic.new(basic_params)
-
     respond_to do |format|
       if @basic.save
-        format.html { redirect_to @basic, notice: 'Basic was successfully created.' }
-        format.json { render :show, status: :created, location: @basic }
+        format.html { redirect_to edit_basic_path(@basic), notice: 'Basic was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @basic.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /basics/1
-  # PATCH/PUT /basics/1.json
-  def update
-    respond_to do |format|
-      if @basic.update(basic_params)
-        format.html { redirect_to @basic, notice: 'Basic was successfully updated.' }
-        format.json { render :show, status: :ok, location: @basic }
-      else
-        format.html { render :edit }
-        format.json { render json: @basic.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /basics/1
-  # DELETE /basics/1.json
-  def destroy
-    @basic.destroy
-    respond_to do |format|
-      format.html { redirect_to basics_url, notice: 'Basic was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
@@ -69,6 +68,6 @@ class BasicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def basic_params
-      params.require(:basic).permit(:type, :startTime, :endTime, :timeStep)
+      params.require(:basic).permit(:buildingType, :buildingId)
     end
 end

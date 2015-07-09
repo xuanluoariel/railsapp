@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="page-header">
+		<h4>Basic</h4>
+	</div>
+	<%= form_for([@basic, @basic.space_categories.build]) do |f| %>
+		<% if @space_category.errors.any? %>
+		  <div class="alert alert-warning" role="alert">
+		    <%= "Error:"%> 
+		    <ul>
+		    <% @space_category.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+	  <form>
+	  	<div class="row">
+	  		<div class="col-md-2 col-sm-2 col-xs-2" class="field">
+		  		<%= f.label "Name"%><br>
+		  	</div>
+		  	<div class="col-md-2 col-sm-2 col-xs-2" class="field">
+		  		<%= f.label "Density"%><br>
+		  	</div>
+	  	</div> 
+			<div class="row">	  
+			  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+			  	<div class="form-group">		    	
+				  	<%= f.text_field :name, class: "form-control" %>
+			    </div>
+			  </div>		  	  		  
+			  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+			  	<div class="form-group">		    	
+				  	<%= f.number_field :density, class: "form-control" %>
+			    </div>
+			  </div>		  		  
+		  
+			  <%= f.submit "Update" , class: "btn btn-large btn-primary" %>
+				<%= link_to 'Cancel', edit_basic_path(@basic), class: "btn btn-large btn-default"  %>	
+			</div>
+		</form>
+	<% end %>
+</div>

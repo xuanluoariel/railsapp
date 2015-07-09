@@ -1,0 +1,72 @@
+<%= form_tag(:controller => :space_categories, :action => :update_space_category, :method => :post, :basic_id=> @basic.id, :id=>@space_category.id) do -%>
+	<% if @space_category.errors.any? %>
+	  <div class="alert alert-warning" role="alert">
+	    <%= "Error:"%> 
+	    <ul>
+	    <% @space_category.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	<% end %>
+  <form>
+  	<div class="row">
+  		<div class="col-md-2 col-sm-2 col-xs-2" class="field">
+	  		<%= "Name"%><br>
+	  	</div>
+	  	<div class="col-md-2 col-sm-2 col-xs-2" class="field">
+	  		<%= "Density"%><br>
+	  	</div>
+  	</div> 
+		<div class="row">	  
+		  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+		  	<div class="form-group">
+		  		<%= text_field_tag("space_category_name#{@space_category.id}", @space_category.name, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+		  	</div>
+		  </div>		  	  		  
+		  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+		  	<div class="form-group">
+		  		<%= text_field_tag("space_category_density#{@space_category.id}", @space_category.density, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+		    </div>
+		  </div>		  		  
+	  
+		  <div class="col-md-2 col-sm-2 col-xs-2" class="actions">
+			  <%= submit_tag "Update" , class: "btn btn-large btn-default" %>
+			</div>	
+		</div>
+	</form>
+<% end %>
+<div class="page-header">
+	<h4>Occupant Composition</h4>
+</div>
+<%= form_tag(:controller => :space_categories, :action => :update_occupant, :method => :post, :basic_id=> @basic.id, :id=>@space_category.id) do -%>	
+	<div class = "media">
+		<div class = "media-body">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my_table">
+				<table class = "table table-hover">
+				  <thead>
+				    <tr>
+				      <th>Type      </th>
+				      <th>Percentage </th>
+				      <th colspan="2"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <% @space_category.occupants.each do |occupant| %>
+				      <tr>
+				        <td><%= select_tag("occupant_occupantType#{occupant.id}", options_for_select(@basic.occupant_categories.all, occupant.occupantType), {:onchange=> "this.form.submit()", :class=> 'my_select'}) %></td>
+				        <td><%= text_field_tag("occupant_percentage#{occupant.id}", occupant.percentage, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+				        <td class = "my_td"><%= link_to "Delete", [occupant.space_category.basic, occupant.space_category, occupant], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-large btn-default"%></td>
+				      </tr>
+				    <% end %>
+				  </tbody>
+				</table>
+				<div class="btn btn-large btn-primary my_right" data-toggle="modal" data-target="#myModal">
+					<%= "New Occupant Type"%>
+				</div>
+				<%= render 'modal' %>
+				<%= submit_tag "Add occupant group", class: "btn btn-large btn-info my-btn" %>
+			</div>
+		</div>
+	</div>
+<% end %>

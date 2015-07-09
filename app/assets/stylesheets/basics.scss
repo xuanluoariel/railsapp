@@ -1,3 +1,60 @@
 // Place all the styles related to the Basics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.my_select {
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  display: inline-block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+.my_option {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 14px;
+  border: 10px;
+  box-sizing: border-box;
+  color: #333333;
+  display: inline-block;
+}
+.my_btn{
+  margin-top: 15px;
+  margin-left:15px;
+}
+.my_right{
+  float: right;
+}
+.dropdown-toggle {
+  min-width:80px;
+  text-align: right;
+ }
+.my_choice{
+  text-align: left;
+}
+.my_td{
+  margin-bottom: 0px;
+}
+.button, input, select, textarea {
+  height: 34px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  width: 20%;
+}
+.h5, h5{
+  font-weight: bold;
+}
+.my_nav{
+  margin-top: 30px;
+}
+.nav-tabs>li {
+  font-size: 16px;
+}
+.nav-tabs>li.active {
+  font-weight: bold;
+  font-size: 16px;
+  color: #337ab7;
+}

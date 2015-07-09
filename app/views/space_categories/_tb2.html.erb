@@ -1,0 +1,82 @@
+<%= form_for([@basic, @basic.occupant_categories.build]) do |f| %>			
+	<div class = "media">
+		<div class = "media-body">
+			<table class = "table table-hover">
+			  <thead>
+			    <tr>
+			    	<th>Location</th>
+			      <th>Present percent</th>
+			      <th>Duration</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<tr>
+			  		<td>Own office</td>
+			      <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.number_field :ownPercent, class: "form-control" %>
+					    </div>
+					  </td>		  		  
+					  <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.time_field :ownDuration, class: "form-control"%>
+					    </div>
+					  </td>
+			    </tr>
+			    <tr>
+			  		<td>Other office</td>
+			      <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.number_field :otherPercent, class: "form-control" %>
+					    </div>
+					  </td>		  		  
+					  <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.time_field :otherDuration, class: "form-control"%>
+					    </div>
+					  </td>
+			    </tr>
+			    <tr>
+			  		<td>Meeting room</td>
+			      <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.number_field :meetingPercent, class: "form-control" %>
+					    </div>
+					  </td>		  		  
+					  <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.time_field :meetingDuration, class: "form-control"%>
+					    </div>
+					  </td>
+			    </tr>
+			    <tr>
+			  		<td>Auxiliary</td>
+			      <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.number_field :auxPercent, class: "form-control" %>
+					    </div>
+					  </td>		  		  
+					  <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.time_field :auxDuration, class: "form-control"%>
+					    </div>
+					  </td>
+			    </tr>
+			    <tr>
+			  		<td>Outdoor</td>
+			      <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.number_field :outPercent, class: "form-control" %>
+					    </div>
+					  </td>		  		  
+					  <td>
+					  	<div class="form-group my_td">		    	
+						  	<%= f.time_field :outDuration, class: "form-control"%>
+					    </div>
+					  </td>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+<% end %>

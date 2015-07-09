@@ -1,0 +1,14 @@
+<%= form_for @occupant, :url => basic_space_category_occupant_path(@basic,@space_category,@occupant), :html => {:method => :patch} do |f| %>
+
+  <div class="field">
+    <%= f.label :occupantType %><br>
+    <%= f.text_field :occupantType %>
+  </div>
+  <div class="field">
+    <%= f.label :percentage %><br>
+    <%= f.number_field :percentage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
