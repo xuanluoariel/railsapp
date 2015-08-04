@@ -1,0 +1,39 @@
+<%= form_tag(:controller => :space_categories, :action => :create_new, :method => :post, :basic_id=> @basic.id) do -%>
+	<% if session["Basic #{@basic.id} error"] != nil %>
+	  <div class="alert alert-warning" role="alert">
+	    <%= "Error:"%> 
+	    <ul>
+		    <li><%= session["Basic #{@basic.id} error"]  %></li>
+		    <% session["Basic #{@basic.id} error"] = nil %>
+	    </ul>
+	  </div>
+	<% end %>
+	<div class = "media">
+		<div class = "media-body">
+			<div class="col-lg-6 col-md-9 col-sm-12 col-xs-12 my_table">
+				<table class = "table table-hover">
+				  <thead>
+				    <tr>
+				      <th>Name    </th>
+				      <th>Usage   </th>
+				      <th colspan="1"></th>
+				    </tr>
+				  </thead>
+				  
+				  <tbody>
+			      <tr>
+			        <td><%= text_field_tag(:name, nil, { :class=> "form-control" })%></td>
+			        <td><%= select_tag(:usage, options_for_select([ "Office", "Meeting room", "Other" ]), {:class=> 'my_select'})%></td>
+			        <td><%= submit_tag "Create" , class: "btn btn-large btn-primary my_right" %></td>
+			      </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<% end %>
+<% if @saved != nil %>
+ 	<div class="alert alert-warning" role="alert">
+		<h5><%= "Move on" %></h5>
+	</div>
+<% end %>

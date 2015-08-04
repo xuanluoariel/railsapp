@@ -1,0 +1,15 @@
+<%= form_tag(:controller => :occupant_categories, :action => :create_occupant_category, :method => :post, :basic_id=> @basic.id) do -%>
+	<div class="row my_row">
+		<table>
+		  <tbody>
+		    <tr>
+		    	<th><%= label_tag(:name, "Name" ) %></th>
+		      <th><%= text_field_tag(:name, nil,{:class=> "form-control my_width_max my_left"}) %></th>
+		      <th><%= label_tag(:event_type, "Schedule type",{:class=> "my_left"}) %></th>
+		      <th><%= select_tag(:event_type, options_for_select([ "All", "Weekday/Weekend" ]), {:class=> 'my_select my_width_max my_left'})%></th>
+		      <th><%= submit_tag "Create" , class: "btn btn-large btn-primary my_left"%></th>
+		    </tr>
+		  </tbody>
+  	</table>
+  </div>
+<% end %>

@@ -6,6 +6,7 @@ class CreateBasics < ActiveRecord::Migration
       t.datetime :endTime
       t.integer :timeStep
 
+
       t.timestamps null: false
     end
   end

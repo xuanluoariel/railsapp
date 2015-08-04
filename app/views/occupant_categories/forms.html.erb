@@ -1,0 +1,248 @@
+<% @occupant_category = OccupantCategory.find(params[:id]) %>
+<% @basic = Basic.find(params[:basic_id]) %>
+<% @error = params[:err] %>
+<ul class="nav nav-tabs">
+	<li role="presentation"><%= link_to 'Start new', controller: "basics", action: "welcome", id: @basic %></li>
+  <li role="presentation"><%= link_to 'Spaces', edit_basic_path(@basic) %></li>
+  <li role="presentation"><%= link_to 'Space Type', basic_space_categories_path(@basic) %></li>
+  <li role="presentation" class="active"><%= link_to 'Occupant Type', basic_occupant_categories_path(@basic)%></li>
+  <li role="presentation"><%= link_to 'Simulate', controller: "basics", action: "simulate", id: @basic %></li>
+</ul>
+<div class="bs-callout bs-callout-info my_indent">
+	<div class="page-header space_hearder">
+		<h5>Create a new occupant type</h5>
+	</div>
+	<%= form_tag(:controller => :occupant_categories, :action => :update_occupant_category, :method => :post, :basic_id=> @basic.id, :id=>@occupant_category.id) do -%>
+		<% if session["Occupant category #{@occupant_category.id} error"] != nil %>
+		  <div class="alert alert-warning my_indent" role="alert">
+		    <%= "Error:"%> 
+		    <ul>
+			    <li><%= session["Occupant category #{@occupant_category.id} error"]  %></li>
+			    <% session["Occupant category #{@occupant_category.id} error"] = nil %>
+		    </ul>
+		  </div>
+		<% end %>
+		<div class="row my_row">
+			<table>
+			  <tbody>
+			    <tr>
+			    	<th><%= label_tag(:name, "Name") %></th>
+			      <th><%= text_field_tag(:name, @occupant_category.name,{:onchange=> "this.form.submit()", :class=> "form-control my_width_max my_left"}) %></th>
+			    </tr>
+			  </tbody>
+	  	</table>
+	  </div>
+		<% @occupant_category.movement_behaviors.each_with_index do |m, index|  %>
+			<div class="bs-callout bs-callout-warning my_indent">
+				<% if m.event_type == "All" %>
+      		<%= label_tag("#{m.event_type}") %>
+      	<% else %>
+      		<%= label_tag("#{m.event_type}s") %>
+      	<% end %>
+    	</div>
+    	<div class="bs-callout bs-callout-info my_indent">
+    		<table>
+      		<% if m.event_type == "Weekend" %>
+	      		<% if m.isWorking == 1 %>
+	      			<th><%= check_box_tag("movement_behavior_A#{m.id}","YES", true, {:onchange=> "this.form.submit()", :class=> "my_indent"}) %></th>
+	      		<% else %>
+	      			<th><%= check_box_tag("movement_behavior_A#{m.id}","YES", false, {:onchange=> "this.form.submit()", :class=> "my_indent"}) %></th>
+	      		<% end %>
+	      			<th><%= label_tag("movement_behavior_A#{m.id}", "Occupants work on weekends.",{:class=> "my_indent"}) %></th>
+	      	<% end %>
+      	</table>
+      	<% if m.isWorking == 1 %>
+	      	<div class="row my_row">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+							<div class="page-header space_hearder">
+								<h5>Event</h5>
+							</div>			
+							<div class = "media">
+								<div class = "media-body">
+									<table class = "table table-hover">
+									  <thead>
+									    <tr>
+									    	<th>Event</th>
+									      <th>Start Time</th>
+									      <th>Typical Time</th>
+									      <th>End Time</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									  	<tr>
+									  		<td>Arrival</td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_AStart#{m.id}", m.AStart, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_ATypical#{m.id}", m.ATypical, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" }) %>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_AEnd#{m.id}", m.AEnd, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Go to lunch</td>
+									      		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_GTLStart#{m.id}", m.GTLStart, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_GTLTypical#{m.id}", m.GTLTypical, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" }) %>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_GTLEnd#{m.id}", m.GTLEnd, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Back from lunch</td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_BFLStart#{m.id}", m.BFLStart, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_BFLTypical#{m.id}", m.BFLTypical, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" }) %>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_BFLEnd#{m.id}", m.BFLEnd, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Departure</td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_DStart#{m.id}", m.DStart, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_DTypical#{m.id}", m.DTypical, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" }) %>
+											    </div>
+											  </td>
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_DEnd#{m.id}", m.DEnd, {:onchange=> "this.form.submit()", :class=> "form-control", :placeholder=>"hh:mm" })%>
+											    </div>
+											  </td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+							<div class="page-header space_hearder">
+								<h5>Space occupancy</h5>
+							</div>			
+							<div class = "media">
+								<div class = "media-body">
+									<table class = "table table-hover">
+									  <thead>
+									    <tr>
+									    	<th>Location</th>
+									      <th>Use time percentage (%)</th>
+									      <th>Average stay time (min)</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									  	<tr>
+									  		<td>Own office</td>
+									      <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_ownPercent#{m.id}", m.ownPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_ownDuration#{m.id}", m.ownDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Other office</td>
+									      <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_otherPercent#{m.id}", m.otherPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_otherDuration#{m.id}", m.otherDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Meeting room</td>
+									      <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_meetingPercent#{m.id}", m.meetingPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_meetingDuration#{m.id}", m.meetingDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Auxiliary</td>
+									      <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_auxPercent#{m.id}", m.auxPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_auxDuration#{m.id}", m.auxDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>
+									    </tr>
+									    <tr>
+									  		<td>Outdoor</td>
+									      <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= label_tag("movement_behavior_outPercent#{m.id}", m.outPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>		  		  
+											  <td>
+											  	<div class="form-group my_td">		    	
+												  	<%= text_field_tag("movement_behavior_outDuration#{m.id}", m.outDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+											    </div>
+											  </td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+
+	  <% end %>
+		<div class="row my_row">
+			<%= submit_tag "Save" , class: "btn btn-large btn-primary my_btn my_right"%>
+			<%= submit_tag "Cancel" , class: "btn btn-large btn-default my_btn my_right"%>
+		</div>
+	<% end %>
+
+</div>
+

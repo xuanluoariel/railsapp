@@ -1,0 +1,183 @@
+<% @basic = Basic.find(params[:id]) %>
+<% 
+	@room_list = Array.new 
+	@basic.spaces.each do |sp|
+	   i = 1 
+	  while (i<=sp.multiplier) 
+	    @room_list.push("#{sp.spaceType} - #{i}")
+	    i += 1 
+	  end 
+	end 
+	@year_list = ('2000'..'2020').to_a
+	@mon_list = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] 	
+	@day_list = ('1'..'31').to_a
+	@time_step_list = [ "5 min", "10 min", "15 min", "20 min"] 
+		
+	@time_step = @time_step_list[@basic.time_step.to_i/5-1]
+	@start_mon = @mon_list[@basic.start_mon.to_i-1]
+	@end_mon = @mon_list[@basic.end_mon.to_i-1]
+%>
+
+<%
+	@user_hash_array = Array.new
+  output_path = Rails.root.join('db', 'user_data',"output_#{@basic.session_number}_package").to_s
+  output_file_name = output_path + "/output.csv"
+  @display_array = Array.new
+  if File.exist?(output_file_name)
+    @user_hash_array = CSV.read(output_file_name)
+    if @user_hash_array != nil
+      @user_hash_array.each_with_index do |row, index|
+        if index > 1
+          interval = 1000*60*@basic.time_step
+          time_tag = get_day_num(@basic.start_year, @basic.start_mon, @basic.start_day)*24*3600*1000 + index*interval 
+          if @room_num != nil
+            @display_array.push([time_tag, row[@room_num.to_i+2].to_i])
+          else
+            @room_num = 1
+            @display_array.push([time_tag, row[3].to_i])
+          end
+        end
+      end
+    end
+  end
+%>
+<ul class="nav nav-tabs">
+	<li role="presentation"><%= link_to 'Start new', controller: "basics", action: "welcome", id: @basic %></li>
+  <li role="presentation"><%= link_to 'Spaces', edit_basic_path(@basic) %></li>
+  <li role="presentation"><%= link_to 'Space Type', basic_space_categories_path(@basic) %></li>
+  <li role="presentation"><%= link_to 'Occupant Type', basic_occupant_categories_path(@basic)%></li>
+  <li role="presentation" class="active"><%= link_to 'Simulate', controller: "basics", action: "simulate", id: @basic %></li>
+</ul>
+
+<div class="bs-callout bs-callout-info ">
+	 <% if @error != nil %>
+	 	<div class="alert alert-warning my_indent" role="alert">
+  		<h5><%= 'Error: ' + @error %></h5>
+  	</div>
+	<% end %>
+	
+	<%= form_tag(:controller=> :basics, :action => :simulate_input, :method => :post, :id => @basic.id) do -%>
+		<div class="page-header my_top_2 ">
+  		<h5> Simulation settings</h5>
+  	</div>
+  	<div class="col-md-12 col-sm-12 col-xs-12">
+  		<table class="table">
+			  <thead>
+			    <tr>
+			    	<th><%= label_tag(:year, "Simulation year") %></th>
+			    	<th colspan="2"><%= label_tag(:s_date, "Start date") %></th>
+			    	<th colspan="2"><%= label_tag(:e_date, "End date") %></th>
+			    	<th><%= label_tag(:time_step, "Time step") %></th>
+			    </tr>
+			   </thead>
+			   <tbody>
+			    <tr>
+			    	<th><%= select_tag(:year, options_for_select(@year_list, @basic.start_year),  {:class=> 'my_width_all'})%></th>
+			      <th><%= select_tag(:s_mon, options_for_select(@mon_list, @start_mon),  {:class=> 'my_width_all'})%></th>
+			      <th><%= select_tag(:s_day, options_for_select(@day_list, @basic.start_day),  {:class=> 'my_width_all'})%></th>
+			      <th><%= select_tag(:e_mon, options_for_select(@mon_list, @end_mon),  {:class=> 'my_width_all'})%></th>
+			      <th><%= select_tag(:e_day, options_for_select(@day_list, @basic.end_day),  {:class=> 'my_width_all'})%></th>
+			      <th><%= select_tag(:time_step, options_for_select([ "5 min", "10 min", "15 min", "20 min"], @time_step), {:class=> 'my_width_all'}) %></th>
+			      <th><%= submit_tag("Simulate",  {:class=>"btn btn-primary my_width_all"} )%></th>
+			    </tr>
+			  </tbody>
+	  	</table>
+  	</div>
+		
+	<% end -%>
+	
+	<div class="page-header">
+  	<h5>Results from last simulation</h5>
+  </div>
+  <% if @user_hash_array != nil %>
+	  <div class="row my_row">
+	  	<%= form_tag(:controller=> :basics, :action => :download_files, :method => :post, :id => @basic.id) do -%>
+				<th><%= submit_tag("Download schedule files",  {:class=>"btn btn-info my_left"} )%></th>
+			<% end %>
+			<% if @display_array != nil  %>
+				<% if @room_num == nil %>
+					<% @room_num = 1 %>
+				<% end %>
+				<% room_name = @room_list[@room_num-1] %>
+				<div class="my_top_2 my_indent my_right">
+					<%= form_tag(:controller=> :basics, :action => :simulate_input, :method => :post, :id => @basic.id) do -%>
+						<%= label_tag(:room_num, "Room", {:class=> 'my_top_2'})%>
+						<%= select_tag(:room_num, options_for_select(@room_list, room_name), {:onchange=> "this.form.submit()", :class=> 'my_top_2 my_left'} ) %>
+					<% end %>
+				</div>
+				
+			<% end %>
+		</div>
+		<div id="container" style="width:100%; height:400px;"></div>
+	<% end %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+      $('#container').highcharts({
+          chart: {
+              zoomType: 'x'
+          },
+          title: {
+              text: 'Occupancy schedule - by Room'
+          },
+          subtitle: {
+              text: document.ontouchstart === undefined ?
+                      'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+          },
+          xAxis: {
+              type: 'datetime',
+              tickPixelInterval: 100,
+              dateTimeLabelFormats: {
+                hour: '%H:%M',
+            }
+          },
+          yAxis: {
+              title: {
+                  text: 'Number of people'
+              },
+              min: 0
+          },
+          legend: {
+              enabled: false
+          },
+          
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x:%e. %b}: {point.y}'
+	        },
+	        
+          plotOptions: {
+              area: {
+                  fillColor: {
+                      linearGradient: {
+                          x1: 0,
+                          y1: 0,
+                          x2: 0,
+                          y2: 1
+                      },
+                      stops: [
+                          [0, Highcharts.getOptions().colors[0]],
+                          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                      ]
+                  },
+                  marker: {
+                      radius: 2
+                  },
+                  lineWidth: 1,
+                  states: {
+                      hover: {
+                          lineWidth: 1
+                      }
+                  },
+                  threshold: null
+              }
+          },
+          series: [{
+              type: 'area',
+              name: 'Number of people in room',
+              data: <%= @display_array %>
+          }]
+      });
+  });
+</script>

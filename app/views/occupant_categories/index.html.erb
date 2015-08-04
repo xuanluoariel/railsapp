@@ -1,250 +1,275 @@
-<div class="container">
-	<ul class="nav nav-tabs my_nav">
-	  <li role="presentation"><%= link_to 'Edit Building', edit_basic_path(@basic) %></li>
-	  <li role="presentation"><%= link_to 'Edit Space', basic_space_categories_path(@basic) %></li>
-	  <li role="presentation" class="active"><%= link_to 'Edit Occupant', basic_occupant_categories_path(@basic)%></li>
-	</ul>
-	<% @basic.occupant_categories.each_with_index do |occupant_category, index| %>
-		<%= form_for occupant_category, :url => basic_occupant_category_path(@basic,occupant_category), :html => {:method => :patch} do |f| %>
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="heading<%= index%>">
-			      <h4 class="panel-title">
-			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index%>" aria-expanded="true" aria-controls="collapse<%= index%>">
-			          <%= occupant_category.name %>
-			        </a>
-			      </h4>
-			    </div>
-				  <div id="collapse<%= index%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index%>">
-			      <div class="panel-body">
-			      	<div class="row my_row">
-								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
-									<div class="page-header space_hearder">
-										<h4>Event</h4>
-									</div>			
-									<div class = "media">
-										<div class = "media-body">
-											<table class = "table table-hover">
-											  <thead>
-											    <tr>
-											    	<th>Event</th>
-											      <th>Typical Time</th>
-											      <th>Start Time</th>
-											      <th>End Time</th>
-											    </tr>
-											  </thead>
-											  <tbody>
-											  	<tr>
-											  		<td>Arrival</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :ATypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :AStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :AEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Work morning</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WMTypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WMStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WMEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Go to lunch</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :GTLTypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :GTLStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :GTLEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Back from lunch</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :BFLTypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :BFLStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :BFLEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Work afternoon</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WATypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WAStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :WAEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Departure</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :DTypical, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :DStart, class: "form-control"%>
-													    </div>
-													  </td>
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :DEnd, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											  </tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
-									<div class="page-header space_hearder">
-										<h4>Space occupancy</h4>
-									</div>			
-									<div class = "media">
-										<div class = "media-body">
-											<table class = "table table-hover">
-											  <thead>
-											    <tr>
-											    	<th>Location</th>
-											      <th>Present percent</th>
-											      <th>Duration</th>
-											    </tr>
-											  </thead>
-											  <tbody>
-											  	<tr>
-											  		<td>Own office</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.number_field :ownPercent, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :ownDuration, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Other office</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.number_field :otherPercent, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :otherDuration, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Meeting room</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.number_field :meetingPercent, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :meetingDuration, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Auxiliary</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.number_field :auxPercent, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :auxDuration, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											    <tr>
-											  		<td>Outdoor</td>
-											      <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.number_field :outPercent, class: "form-control" %>
-													    </div>
-													  </td>		  		  
-													  <td>
-													  	<div class="form-group my_td">		    	
-														  	<%= f.time_field :outDuration, class: "form-control"%>
-													    </div>
-													  </td>
-											    </tr>
-											  </tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row my_row my_right">
-								<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"></div>
-								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-									<%= f.submit "Update" , class: "btn btn-large btn-primary"%>
-								</div>	
-							</div>
-			        
-						</div>
-			    </div>
-		    </div>
-		  </div>
-	  <% end %>
-	<% end %>
+<% 
+	if params[:basic_id] != nil
+		@basic = Basic.find(params[:basic_id])
+	end 
+%>
+<ul class="nav nav-tabs">
+	<li role="presentation"><%= link_to 'Start new', controller: "basics", action: "welcome", id: @basic %></li>
+  <li role="presentation"><%= link_to 'Spaces', edit_basic_path(@basic) %></li>
+  <li role="presentation"><%= link_to 'Space Type', basic_space_categories_path(@basic) %></li>
+  <li role="presentation" class="active"><%= link_to 'Occupant Type', basic_occupant_categories_path(@basic)%></li>
+  <li role="presentation"><%= link_to 'Simulate', controller: "basics", action: "simulate", id: @basic %></li>
+</ul>
+<div class="bs-callout bs-callout-info my_note">
+	<h5>Notes:</h5>
+	<li>Occupant behavior events and space occupancy are used to simulate occupant movement patterns and schedules.</li>
+	<li>Events define the pattern of entering and leaving the building of a type of occupants, and space occupancy defines the pattern of moving around.</li>
 </div>
+<div class="bs-callout bs-callout-warning my_indent">
+	<div class="page-header space_hearder">
+		<h5>Create a new occupant type</h5>
+	</div>
+	<% if @error != nil %>
+	  <div class="alert alert-warning" role="alert">
+	    <%= "Error:"%> 
+	    <ul>
+	      <li><%= @error %></li>
+	    </ul>
+	  </div>
+	<% end %>
+	<%= render "newt" %>
+</div>
+<% @basic.occupant_categories.each_with_index do |occupant_category, index| %>
+
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="heading<%= index%>">
+	      <h4 class="panel-title">
+	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index%>" aria-expanded="true" aria-controls="collapse<%= index%>">
+	          <%= occupant_category.name %>
+	        </a>
+	      </h4>
+	    </div>
+	    <%= form_tag(:controller => :occupant_categories, :action => :update_occupant_category_index, :method => :post, :basic_id=> @basic.id, :id=>occupant_category.id,  :anchor=> "heading#{ index}") do -%>
+		  	<div id="collapse<%= index%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index%>">
+	      <div class="panel-body">
+	      	<% if session["Occupant category #{occupant_category.id} error"] != nil %>
+					  <div class="alert alert-warning my_indent" role="alert">
+					    <%= "Error:"%> 
+					    <ul>
+						    <li><%= session["Occupant category #{occupant_category.id} error"]  %></li>
+						    <% session["Occupant category #{occupant_category.id} error"] = nil %>
+					    </ul>
+					  </div>
+					<% end %>
+	      	<div class="row my_row">
+						<table>
+						  <tbody>
+						    <tr>
+						    	<th><%= label_tag(:name, "Name" ) %></th>
+						      <th><%= text_field_tag(:name, occupant_category.name,{:onchange=> "this.form.submit()", :class=> "form-control my_width_max my_left"}) %></th>
+						    </tr>
+						  </tbody>
+				  	</table>
+				  </div>
+	      	<% occupant_category.movement_behaviors.each_with_index do |m|  %>
+		      	<div class="bs-callout bs-callout-warning my_indent">
+			      	<%= label_tag("#{m.event_type}s") %>
+		      	</div>
+		      	<div class="bs-callout bs-callout-info my_indent">
+		      		<table>
+			      		<% if m.event_type == "Weekend" %>
+				      		<% if m.isWorking == 1 %>
+				      			<th><%= check_box_tag("movement_behavior_A#{m.id}","YES", true, {:onchange=> "this.form.submit()", :class=> "my_indent"}) %></th>
+				      		<% else %>
+				      			<th><%= check_box_tag("movement_behavior_A#{m.id}","YES", false, {:onchange=> "this.form.submit()", :class=> "my_indent"}) %></th>
+				      		<% end %>
+				      			<th><%= label_tag("movement_behavior_A#{m.id}", "Occupants work on weekends.",{:class=> "my_indent"}) %></th>
+				      	<% end %>
+			      	</table>
+			      	<% if (m.isWorking == 1) %>
+			      		<div class="row my_row">
+									<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+										<div class="page-header space_hearder">
+											<h5>Event</h5>
+										</div>			
+										<div class = "media">
+											<div class = "media-body">
+												<table class = "table table-hover">
+												  <thead>
+												    <tr>
+												    	<th class="my_width_25">Event</th>
+												      <th>Start Time</th>
+												      <th>Typical Time</th>
+												      <th>End Time</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												  	<tr>
+												  		<td>Arrival</td>
+														  <td class="my_width_25">
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_AStart#{m.id}", m.AStart, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_ATypical#{m.id}", m.ATypical, {:onchange=> "this.form.submit()", :class=> "form-control" }) %>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_AEnd#{m.id}", m.AEnd, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Go to lunch</td>
+												      		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_GTLStart#{m.id}", m.GTLStart, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_GTLTypical#{m.id}", m.GTLTypical, {:onchange=> "this.form.submit()", :class=> "form-control" }) %>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_GTLEnd#{m.id}", m.GTLEnd, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Back from lunch</td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_BFLStart#{m.id}", m.BFLStart, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_BFLTypical#{m.id}", m.BFLTypical, {:onchange=> "this.form.submit()", :class=> "form-control" }) %>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_BFLEnd#{m.id}", m.BFLEnd, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Departure</td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_DStart#{m.id}", m.DStart, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_DTypical#{m.id}", m.DTypical, {:onchange=> "this.form.submit()", :class=> "form-control" }) %>
+														    </div>
+														  </td>
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_DEnd#{m.id}", m.DEnd, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												  </tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my_table">
+										<div class="page-header space_hearder">
+											<h5>Space occupancy</h5>
+										</div>			
+										<div class = "media">
+											<div class = "media-body">
+												<table class = "table table-hover">
+												  <thead>
+												    <tr>
+												    	<th>Location</th>
+												      <th>Use time percentage (%)</th>
+												      <th>Average stay time(min)</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												  	<tr>
+												  		<td>Own office</td>
+												      <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_ownPercent#{m.id}", m.ownPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_ownDuration#{m.id}", m.ownDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Other office</td>
+												      <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_otherPercent#{m.id}", m.otherPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_otherDuration#{m.id}", m.otherDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Meeting room</td>
+												      <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_meetingPercent#{m.id}", m.meetingPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_meetingDuration#{m.id}", m.meetingDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Auxiliary</td>
+												      <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_auxPercent#{m.id}", m.auxPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_auxDuration#{m.id}", m.auxDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												    <tr>
+												  		<td>Outdoor</td>
+												      <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= label_tag("movement_behavior_outPercent#{m.id}", m.outPercent, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>		  		  
+														  <td>
+														  	<div class="form-group my_td">		    	
+															  	<%= text_field_tag("movement_behavior_outDuration#{m.id}", m.outDuration, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+														    </div>
+														  </td>
+												    </tr>
+												  </tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+						
+							<% end %>
+						</div>
+					<% end %>
+					<%= submit_tag("Delete",  {:class=>"btn btn-info my_right"} )%>
+				</div>
+	    </div>
+    	<% end %>
+    </div>
+  </div>
+  
+<% end %>
+
+

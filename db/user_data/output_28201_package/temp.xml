@@ -1,0 +1,2296 @@
+<?xml version="1.0"?>
+<OccupantBehavior xmlns="http://www.obxml.org/schema/0-1" version="1.0" useSIUnitsForResults="true">
+  <Buildings>
+    <Building ID="B1">
+      <Description>A office building which contains 12 space and 16 staffs.</Description>
+      <Address>Tsinghua University China</Address>
+      <Type>Office</Type>
+      <Spaces>
+        <Space ID="S0">
+          <Type>Outdoor</Type>
+        </Space>
+        <Space ID="S1">
+          <Type>OfficeShared</Type>
+          <OccupantID>S1O1</OccupantID>
+          <OccupantID>S1O2</OccupantID>
+          <OccupantID>S1O3</OccupantID>
+          <OccupantID>S1O4</OccupantID>
+          <OccupantID>S1O5</OccupantID>
+        </Space>
+        <Space ID="S2">
+          <Type>OfficeShared</Type>
+          <OccupantID>S2O1</OccupantID>
+          <OccupantID>S2O2</OccupantID>
+          <OccupantID>S2O3</OccupantID>
+          <OccupantID>S2O4</OccupantID>
+          <OccupantID>S2O5</OccupantID>
+        </Space>
+        <Space ID="S3">
+          <Type>OfficeShared</Type>
+          <OccupantID>S3O1</OccupantID>
+          <OccupantID>S3O2</OccupantID>
+          <OccupantID>S3O3</OccupantID>
+          <OccupantID>S3O4</OccupantID>
+          <OccupantID>S3O5</OccupantID>
+        </Space>
+        <Space ID="S4">
+          <Type>OfficeShared</Type>
+          <OccupantID>S4O1</OccupantID>
+          <OccupantID>S4O2</OccupantID>
+          <OccupantID>S4O3</OccupantID>
+          <OccupantID>S4O4</OccupantID>
+          <OccupantID>S4O5</OccupantID>
+        </Space>
+        <Space ID="S5">
+          <Type>OfficeShared</Type>
+          <OccupantID>S5O1</OccupantID>
+          <OccupantID>S5O2</OccupantID>
+          <OccupantID>S5O3</OccupantID>
+          <OccupantID>S5O4</OccupantID>
+          <OccupantID>S5O5</OccupantID>
+        </Space>
+        <Space ID="S6">
+          <Type>OfficeShared</Type>
+          <OccupantID>S6O1</OccupantID>
+          <OccupantID>S6O2</OccupantID>
+          <OccupantID>S6O3</OccupantID>
+          <OccupantID>S6O4</OccupantID>
+          <OccupantID>S6O5</OccupantID>
+        </Space>
+        <Space ID="S7">
+          <Type>OfficeShared</Type>
+          <OccupantID>S7O1</OccupantID>
+          <OccupantID>S7O2</OccupantID>
+          <OccupantID>S7O3</OccupantID>
+          <OccupantID>S7O4</OccupantID>
+          <OccupantID>S7O5</OccupantID>
+        </Space>
+        <Space ID="S8">
+          <Type>OfficeShared</Type>
+          <OccupantID>S8O1</OccupantID>
+          <OccupantID>S8O2</OccupantID>
+          <OccupantID>S8O3</OccupantID>
+          <OccupantID>S8O4</OccupantID>
+          <OccupantID>S8O5</OccupantID>
+        </Space>
+        <Space ID="S9">
+          <Type>OfficeShared</Type>
+          <OccupantID>S9O1</OccupantID>
+          <OccupantID>S9O2</OccupantID>
+          <OccupantID>S9O3</OccupantID>
+          <OccupantID>S9O4</OccupantID>
+          <OccupantID>S9O5</OccupantID>
+        </Space>
+        <Space ID="S10">
+          <Type>OfficeShared</Type>
+          <OccupantID>S10O1</OccupantID>
+          <OccupantID>S10O2</OccupantID>
+          <OccupantID>S10O3</OccupantID>
+          <OccupantID>S10O4</OccupantID>
+          <OccupantID>S10O5</OccupantID>
+        </Space>
+        <Space ID="S11">
+          <Type>OfficeShared</Type>
+          <OccupantID>S11O1</OccupantID>
+          <OccupantID>S11O2</OccupantID>
+          <OccupantID>S11O3</OccupantID>
+          <OccupantID>S11O4</OccupantID>
+          <OccupantID>S11O5</OccupantID>
+        </Space>
+        <Space ID="S12">
+          <Type>OfficeShared</Type>
+          <OccupantID>S12O1</OccupantID>
+          <OccupantID>S12O2</OccupantID>
+          <OccupantID>S12O3</OccupantID>
+          <OccupantID>S12O4</OccupantID>
+          <OccupantID>S12O5</OccupantID>
+        </Space>
+        <Space ID="S13">
+          <Type>OfficeShared</Type>
+          <OccupantID>S13O1</OccupantID>
+          <OccupantID>S13O2</OccupantID>
+          <OccupantID>S13O3</OccupantID>
+          <OccupantID>S13O4</OccupantID>
+          <OccupantID>S13O5</OccupantID>
+        </Space>
+        <Space ID="S14">
+          <Type>OfficeShared</Type>
+          <OccupantID>S14O1</OccupantID>
+          <OccupantID>S14O2</OccupantID>
+          <OccupantID>S14O3</OccupantID>
+          <OccupantID>S14O4</OccupantID>
+          <OccupantID>S14O5</OccupantID>
+        </Space>
+        <Space ID="S15">
+          <Type>OfficeShared</Type>
+          <OccupantID>S15O1</OccupantID>
+          <OccupantID>S15O2</OccupantID>
+          <OccupantID>S15O3</OccupantID>
+          <OccupantID>S15O4</OccupantID>
+          <OccupantID>S15O5</OccupantID>
+        </Space>
+        <Space ID="S16">
+          <Type>OfficeShared</Type>
+          <OccupantID>S16O1</OccupantID>
+          <OccupantID>S16O2</OccupantID>
+          <OccupantID>S16O3</OccupantID>
+          <OccupantID>S16O4</OccupantID>
+          <OccupantID>S16O5</OccupantID>
+        </Space>
+        <Space ID="S17">
+          <Type>OfficeShared</Type>
+          <OccupantID>S17O1</OccupantID>
+          <OccupantID>S17O2</OccupantID>
+          <OccupantID>S17O3</OccupantID>
+          <OccupantID>S17O4</OccupantID>
+          <OccupantID>S17O5</OccupantID>
+        </Space>
+        <Space ID="S18">
+          <Type>OfficeShared</Type>
+          <OccupantID>S18O1</OccupantID>
+          <OccupantID>S18O2</OccupantID>
+          <OccupantID>S18O3</OccupantID>
+          <OccupantID>S18O4</OccupantID>
+          <OccupantID>S18O5</OccupantID>
+        </Space>
+        <Space ID="S19">
+          <Type>OfficeShared</Type>
+          <OccupantID>S19O1</OccupantID>
+          <OccupantID>S19O2</OccupantID>
+          <OccupantID>S19O3</OccupantID>
+          <OccupantID>S19O4</OccupantID>
+          <OccupantID>S19O5</OccupantID>
+        </Space>
+        <Space ID="S20">
+          <Type>OfficeShared</Type>
+          <OccupantID>S20O1</OccupantID>
+          <OccupantID>S20O2</OccupantID>
+          <OccupantID>S20O3</OccupantID>
+          <OccupantID>S20O4</OccupantID>
+          <OccupantID>S20O5</OccupantID>
+        </Space>
+        <Space ID="S21">
+          <Type>OfficeShared</Type>
+          <OccupantID>S21O1</OccupantID>
+          <OccupantID>S21O2</OccupantID>
+          <OccupantID>S21O3</OccupantID>
+          <OccupantID>S21O4</OccupantID>
+          <OccupantID>S21O5</OccupantID>
+        </Space>
+        <Space ID="S22">
+          <Type>OfficeShared</Type>
+          <OccupantID>S22O1</OccupantID>
+          <OccupantID>S22O2</OccupantID>
+          <OccupantID>S22O3</OccupantID>
+          <OccupantID>S22O4</OccupantID>
+          <OccupantID>S22O5</OccupantID>
+        </Space>
+        <Space ID="S23">
+          <Type>OfficeShared</Type>
+          <OccupantID>S23O1</OccupantID>
+          <OccupantID>S23O2</OccupantID>
+          <OccupantID>S23O3</OccupantID>
+          <OccupantID>S23O4</OccupantID>
+          <OccupantID>S23O5</OccupantID>
+        </Space>
+        <Space ID="S24">
+          <Type>OfficeShared</Type>
+          <OccupantID>S24O1</OccupantID>
+          <OccupantID>S24O2</OccupantID>
+          <OccupantID>S24O3</OccupantID>
+          <OccupantID>S24O4</OccupantID>
+          <OccupantID>S24O5</OccupantID>
+        </Space>
+        <Space ID="S25">
+          <Type>OfficeShared</Type>
+          <OccupantID>S25O1</OccupantID>
+          <OccupantID>S25O2</OccupantID>
+          <OccupantID>S25O3</OccupantID>
+          <OccupantID>S25O4</OccupantID>
+          <OccupantID>S25O5</OccupantID>
+        </Space>
+        <Space ID="S26">
+          <Type>OfficeShared</Type>
+          <OccupantID>S26O1</OccupantID>
+          <OccupantID>S26O2</OccupantID>
+          <OccupantID>S26O3</OccupantID>
+          <OccupantID>S26O4</OccupantID>
+          <OccupantID>S26O5</OccupantID>
+        </Space>
+        <Space ID="S27">
+          <Type>OfficeShared</Type>
+          <OccupantID>S27O1</OccupantID>
+          <OccupantID>S27O2</OccupantID>
+          <OccupantID>S27O3</OccupantID>
+          <OccupantID>S27O4</OccupantID>
+          <OccupantID>S27O5</OccupantID>
+        </Space>
+        <Space ID="S28">
+          <Type>OfficeShared</Type>
+          <OccupantID>S28O1</OccupantID>
+          <OccupantID>S28O2</OccupantID>
+          <OccupantID>S28O3</OccupantID>
+          <OccupantID>S28O4</OccupantID>
+          <OccupantID>S28O5</OccupantID>
+        </Space>
+        <Space ID="S29">
+          <Type>OfficeShared</Type>
+          <OccupantID>S29O1</OccupantID>
+          <OccupantID>S29O2</OccupantID>
+        </Space>
+        <Space ID="S30">
+          <Type>OfficeShared</Type>
+          <OccupantID>S30O1</OccupantID>
+          <OccupantID>S30O2</OccupantID>
+        </Space>
+        <Space ID="S31">
+          <Type>OfficeShared</Type>
+          <OccupantID>S31O1</OccupantID>
+          <OccupantID>S31O2</OccupantID>
+        </Space>
+        <Space ID="S32">
+          <Type>OfficeShared</Type>
+          <OccupantID>S32O1</OccupantID>
+          <OccupantID>S32O2</OccupantID>
+        </Space>
+        <Space ID="S33">
+          <Type>OfficeShared</Type>
+          <OccupantID>S33O1</OccupantID>
+          <OccupantID>S33O2</OccupantID>
+        </Space>
+        <Space ID="S34">
+          <Type>OfficeShared</Type>
+          <OccupantID>S34O1</OccupantID>
+          <OccupantID>S34O2</OccupantID>
+        </Space>
+        <Space ID="S35">
+          <Type>OfficeShared</Type>
+          <OccupantID>S35O1</OccupantID>
+          <OccupantID>S35O2</OccupantID>
+        </Space>
+        <Space ID="S36">
+          <Type>OfficeShared</Type>
+          <OccupantID>S36O1</OccupantID>
+          <OccupantID>S36O2</OccupantID>
+        </Space>
+        <Space ID="S37">
+          <Type>OfficeShared</Type>
+          <OccupantID>S37O1</OccupantID>
+          <OccupantID>S37O2</OccupantID>
+        </Space>
+        <Space ID="S38">
+          <Type>OfficeShared</Type>
+          <OccupantID>S38O1</OccupantID>
+          <OccupantID>S38O2</OccupantID>
+        </Space>
+        <Space ID="S39">
+          <Type>OfficeShared</Type>
+          <OccupantID>S39O1</OccupantID>
+          <OccupantID>S39O2</OccupantID>
+        </Space>
+        <Space ID="S40">
+          <Type>OfficeShared</Type>
+          <OccupantID>S40O1</OccupantID>
+          <OccupantID>S40O2</OccupantID>
+        </Space>
+        <Space ID="S41">
+          <Type>OfficeShared</Type>
+          <OccupantID>S41O1</OccupantID>
+          <OccupantID>S41O2</OccupantID>
+        </Space>
+        <Space ID="S42">
+          <Type>OfficeShared</Type>
+          <OccupantID>S42O1</OccupantID>
+          <OccupantID>S42O2</OccupantID>
+        </Space>
+        <Space ID="S43">
+          <Type>OfficeShared</Type>
+          <OccupantID>S43O1</OccupantID>
+          <OccupantID>S43O2</OccupantID>
+        </Space>
+        <Space ID="S44">
+          <Type>OfficeShared</Type>
+          <OccupantID>S44O1</OccupantID>
+          <OccupantID>S44O2</OccupantID>
+        </Space>
+        <Space ID="S45">
+          <Type>OfficeShared</Type>
+          <OccupantID>S45O1</OccupantID>
+          <OccupantID>S45O2</OccupantID>
+        </Space>
+        <Space ID="S46">
+          <Type>OfficeShared</Type>
+          <OccupantID>S46O1</OccupantID>
+          <OccupantID>S46O2</OccupantID>
+        </Space>
+        <Space ID="S47">
+          <Type>OfficeShared</Type>
+          <OccupantID>S47O1</OccupantID>
+          <OccupantID>S47O2</OccupantID>
+        </Space>
+        <Space ID="S48">
+          <Type>OfficeShared</Type>
+          <OccupantID>S48O1</OccupantID>
+          <OccupantID>S48O2</OccupantID>
+        </Space>
+        <Space ID="S49">
+          <Type>OfficeShared</Type>
+          <OccupantID>S49O1</OccupantID>
+          <OccupantID>S49O2</OccupantID>
+        </Space>
+        <Space ID="S50">
+          <Type>OfficeShared</Type>
+          <OccupantID>S50O1</OccupantID>
+          <OccupantID>S50O2</OccupantID>
+        </Space>
+        <Space ID="S51">
+          <Type>OfficeShared</Type>
+          <OccupantID>S51O1</OccupantID>
+          <OccupantID>S51O2</OccupantID>
+        </Space>
+        <Space ID="S52">
+          <Type>OfficeShared</Type>
+          <OccupantID>S52O1</OccupantID>
+          <OccupantID>S52O2</OccupantID>
+        </Space>
+        <Space ID="S53">
+          <Type>OfficeShared</Type>
+          <OccupantID>S53O1</OccupantID>
+          <OccupantID>S53O2</OccupantID>
+        </Space>
+        <Space ID="S54">
+          <Type>OfficeShared</Type>
+          <OccupantID>S54O1</OccupantID>
+          <OccupantID>S54O2</OccupantID>
+        </Space>
+        <Space ID="S55">
+          <Type>OfficeShared</Type>
+          <OccupantID>S55O1</OccupantID>
+          <OccupantID>S55O2</OccupantID>
+        </Space>
+        <Space ID="S56">
+          <Type>OfficeShared</Type>
+          <OccupantID>S56O1</OccupantID>
+          <OccupantID>S56O2</OccupantID>
+        </Space>
+        <Space ID="S57">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S58">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S59">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S60">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S61">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S62">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S63">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S64">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S65">
+          <Type>Auxiliary</Type>
+          <MaxNumOccupants>10</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S66">
+          <Type>MeetingRoom</Type>
+          <Meetings>
+            <Meeting ID="S66M0">
+              <Duration>60</Duration>
+              <StartTime>10:00</StartTime>
+              <EndTime>12:00</EndTime>
+              <Probability>0.6</Probability>
+            </Meeting>
+            <Meeting ID="S66M1">
+              <Duration>90</Duration>
+              <StartTime>14:00</StartTime>
+              <EndTime>17:30</EndTime>
+              <Probability>0.8</Probability>
+            </Meeting>
+          </Meetings>
+          <MaxNumOccupants>20</MaxNumOccupants>
+          <MinNumOccupants>2</MinNumOccupants>
+        </Space>
+        <Space ID="S67">
+          <Type>MeetingRoom</Type>
+          <Meetings>
+            <Meeting ID="S67M0">
+              <Duration>60</Duration>
+              <StartTime>10:00</StartTime>
+              <EndTime>12:00</EndTime>
+              <Probability>0.6</Probability>
+            </Meeting>
+            <Meeting ID="S67M1">
+              <Duration>90</Duration>
+              <StartTime>14:00</StartTime>
+              <EndTime>17:30</EndTime>
+              <Probability>0.8</Probability>
+            </Meeting>
+          </Meetings>
+          <MaxNumOccupants>20</MaxNumOccupants>
+          <MinNumOccupants>2</MinNumOccupants>
+        </Space>
+        <Space ID="S68">
+          <Type>Corrider</Type>
+          <MaxNumOccupants>5</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S69">
+          <Type>Corrider</Type>
+          <MaxNumOccupants>5</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S70">
+          <Type>Corrider</Type>
+          <MaxNumOccupants>5</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S71">
+          <Type>Corrider</Type>
+          <MaxNumOccupants>5</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S72">
+          <Type>Corrider</Type>
+          <MaxNumOccupants>5</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+        <Space ID="S73">
+          <Type>Lobby</Type>
+          <MaxNumOccupants>20</MaxNumOccupants>
+          <MinNumOccupants>0</MinNumOccupants>
+        </Space>
+      </Spaces>
+    </Building>
+  </Buildings>
+  <Occupants>
+    <Occupant ID="S1O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S1O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S1O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S1O4">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S1O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2O3">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6O5">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8O4">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11O3">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11O5">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12O3">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12O4">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14O3">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14O5">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S17O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S17O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S17O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S17O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S17O5">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S18O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S18O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S18O3">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S18O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S18O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S19O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S19O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S19O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S19O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S19O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S20O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S20O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S20O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S20O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S20O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S21O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S21O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S21O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S21O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S21O5">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S22O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S22O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S22O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S22O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S22O5">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23O4">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25O3">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26O4">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26O5">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27O5">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28O3">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28O4">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28O5">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S29O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S29O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S30O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S30O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S31O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S31O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S32O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S32O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S33O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S33O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S34O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S34O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S35O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S35O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S36O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S36O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S37O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S37O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S38O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S38O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S39O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S39O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S40O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S40O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S41O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S41O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S42O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S42O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S43O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S43O2">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S44O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S44O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S45O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S45O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S46O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S46O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S47O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S47O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S48O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S48O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S49O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S49O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S50O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S50O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S51O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S51O2">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S52O1">
+      <JobType>Administrator</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>AdministratorWeekday</BehaviorID>
+      <BehaviorID>AdministratorWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S52O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S53O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S53O2">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S54O1">
+      <JobType>Sales</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>SalesWeekday</BehaviorID>
+      <BehaviorID>SalesWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S54O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S55O1">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S55O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S56O1">
+      <JobType>Researcher</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ResearcherWeekday</BehaviorID>
+      <BehaviorID>ResearcherWeekend</BehaviorID>
+    </Occupant>
+    <Occupant ID="S56O2">
+      <JobType>Manager</JobType>
+      <LifeStyle>Norm</LifeStyle>
+      <BehaviorID>ManagerWeekday</BehaviorID>
+      <BehaviorID>ManagerWeekend</BehaviorID>
+    </Occupant>
+  </Occupants>
+  <Behaviors>
+    <Behavior ID="ResearcherWeekday">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekday</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>09:00</TypicalTime>
+                <StartTime>08:00</StartTime>
+                <EndTime>09:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>09:30</TypicalTime>
+                <StartTime>09:30</StartTime>
+                <EndTime>11:30</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>12:00</TypicalTime>
+                <StartTime>11:30</StartTime>
+                <EndTime>12:15</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>12:30</TypicalTime>
+                <StartTime>12:15</StartTime>
+                <EndTime>13:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>13:00</TypicalTime>
+                <StartTime>13:00</StartTime>
+                <EndTime>18:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>18:15</TypicalTime>
+                <StartTime>18:00</StartTime>
+                <EndTime>18:30</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>70</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>10</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>10</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>10</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="ResearcherWeekend">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekend</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>100</PercentTimePresence>
+                <Duration>100</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="AdministratorWeekday">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekday</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>09:00</TypicalTime>
+                <StartTime>08:00</StartTime>
+                <EndTime>09:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>09:30</TypicalTime>
+                <StartTime>09:30</StartTime>
+                <EndTime>11:30</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>12:00</TypicalTime>
+                <StartTime>11:30</StartTime>
+                <EndTime>12:15</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>12:30</TypicalTime>
+                <StartTime>12:15</StartTime>
+                <EndTime>13:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>13:00</TypicalTime>
+                <StartTime>13:00</StartTime>
+                <EndTime>18:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>18:15</TypicalTime>
+                <StartTime>18:00</StartTime>
+                <EndTime>18:30</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>50</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>10</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>30</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>10</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="AdministratorWeekend">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekend</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>100</PercentTimePresence>
+                <Duration>100</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="SalesWeekday">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekday</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>09:00</TypicalTime>
+                <StartTime>08:00</StartTime>
+                <EndTime>09:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>09:30</TypicalTime>
+                <StartTime>09:30</StartTime>
+                <EndTime>11:30</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>12:30</TypicalTime>
+                <StartTime>11:30</StartTime>
+                <EndTime>12:45</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>13:00</TypicalTime>
+                <StartTime>12:45</StartTime>
+                <EndTime>13:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>13:30</TypicalTime>
+                <StartTime>13:30</StartTime>
+                <EndTime>18:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>18:15</TypicalTime>
+                <StartTime>18:00</StartTime>
+                <EndTime>18:30</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>50</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>10</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>10</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>30</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="SalesWeekend">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekend</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>100</PercentTimePresence>
+                <Duration>100</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="ManagerWeekday">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekday</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>09:00</TypicalTime>
+                <StartTime>08:00</StartTime>
+                <EndTime>09:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>09:30</TypicalTime>
+                <StartTime>09:30</StartTime>
+                <EndTime>11:30</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>12:30</TypicalTime>
+                <StartTime>11:30</StartTime>
+                <EndTime>12:45</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>13:00</TypicalTime>
+                <StartTime>12:45</StartTime>
+                <EndTime>13:30</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>13:30</TypicalTime>
+                <StartTime>13:30</StartTime>
+                <EndTime>18:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>18:15</TypicalTime>
+                <StartTime>18:00</StartTime>
+                <EndTime>18:30</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>50</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>35</PercentTimePresence>
+                <Duration>60</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>10</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>5</PercentTimePresence>
+                <Duration>20</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+    <Behavior ID="ManagerWeekend">
+      <Drivers>
+        <Time>
+          <DayofWeek>Weekend</DayofWeek>
+        </Time>
+      </Drivers>
+      <Actions>
+        <Movement>
+          <MarkovChainModel>
+            <Events>
+              <Event>
+                <Type>Arrival</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkMorning</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>GoToLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>BackFromLunch</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>WorkAfternoon</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+              <Event>
+                <Type>Departure</Type>
+                <TypicalTime>00:00</TypicalTime>
+                <StartTime>00:00</StartTime>
+                <EndTime>00:00</EndTime>
+              </Event>
+            </Events>
+            <SpaceOccupancies>
+              <SpaceOccupancy>
+                <SpaceCategory>OwnOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>OtherOffice</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>MeetingRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>AuxRoom</SpaceCategory>
+                <PercentTimePresence>0</PercentTimePresence>
+                <Duration>0</Duration>
+              </SpaceOccupancy>
+              <SpaceOccupancy>
+                <SpaceCategory>Outdoor</SpaceCategory>
+                <PercentTimePresence>100</PercentTimePresence>
+                <Duration>100</Duration>
+              </SpaceOccupancy>
+            </SpaceOccupancies>
+          </MarkovChainModel>
+        </Movement>
+      </Actions>
+    </Behavior>
+  </Behaviors>
+</OccupantBehavior>

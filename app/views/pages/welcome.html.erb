@@ -1,21 +1,55 @@
-<div class="container">
-  <div class="starter-template">
-    <h1>Welcome!</h1>
-	  <h3>
-	    This is an simple app to generate occupancy schedule from simple input. 
-	  </h3>
-	  <div class="row">
-	  	<div class="col-md-3"></div>
-	  	<div class="col-md-2">
-	  		<%= link_to "New schedule", {:controller => 'basics', :action => 'edit', :id => "1"}, class: "btn btn-large btn-primary my_btn"%> 
+<ul class="nav nav-tabs">
+	<li role="presentation" class="active"><%= link_to 'Start new', root_path %></li>
+</ul>
+<div class="bs-callout bs-callout-info my_indent my_top_2">
+	<p class= "my_note">Welcome! This is a simple tool to generate realistic building occupancy schedule based on occupant movement behavior simulation in a specific building. Please start a new session by defining the building type, or track a previous session by your session number.</p>
+</div>
+<div class="jumbotron my_top_2">
+	 <% if @error != nil %>
+	 	<div class="alert alert-warning" role="alert">
+  		<h5><%= @error %></h5>
+  	</div>
+	<% end %>
+	<div class="row my_top_2">
+		<div class="col-md-5 col-sm-3 col-xs-2">
+  		<h5>Start a New Session</h5>
+  	</div>
+  	<div class="col-md-7 col-sm-9 col-xs-10">
+  		<%= form_tag(:controller=> :basics, :action => :new, :method => :post) do -%>
+	  		<div class="col-md-4 col-sm-5 col-xs-4 my_no_indent ">
+	  			<%= select_tag(:buildingType, options_for_select([ "Office - Large", "Office - Small" ]), {:class=> 'my_select'}) %>
+  			</div>
+  			<div class="col-md-4 col-sm-3 col-xs-4 my_no_indent ">
+	  			<%= text_field_tag(:area, nil,{:class=> "form-control ", :placeholder=>"Area (sf)"}) %>
+	  		</div>
+	  		<div class="col-md-4 col-sm-4 col-xs-4 my_no_indent ">
+        	<%= submit_tag("New Analysis", {:class=>"btn btn-primary my_right my_width_all"} ) %>
+        </div>
+      <% end -%>
+  	</div>
+	</div> 
+	<div class="row my_top_2">	  
+	  <div class="col-md-5 col-sm-5 col-xs-4">
+	  	<div class="form-group">
+	  		<h5>Continue in a Previous Session</h5>
 	  	</div>
-	    <div class="col-md-2">
-	    	<%= link_to "Import obXML", help_path, class: "btn btn-large btn-primary my_btn" %>
+	  </div>		  	  		  
+	  <div class="col-md-7 col-sm-7 col-xs-8">
+	  	<div class="form-group">
+	  		<%= form_tag(:controller=> :basics, :action => :continue_session, :method => :post) do -%>
+	  			<div class="col-md-8 col-sm-8 col-xs-8 my_no_indent ">
+	  				<%= text_field_tag(:preSessionNo, nil,{:class=> "form-control ", :placeholder=>"Session #:"}) %>
+	  			</div>
+	  			<div class="col-md-4 col-sm-4 col-xs-4 my_no_indent ">
+	        	<%= submit_tag("Continue",  {:class=>"btn btn-primary my_right my_width_all"} )%>
+	        </div>
+	      <% end -%>
 	    </div>
-	    <div class="col-md-2">
-	    	<%= link_to "Import idf", load_path, class: "btn btn-large btn-primary my_btn" %>
-	    </div>
-	    <div class="col-md-3"></div>
-	  </div>
-  </div>
+	  </div>		  		  	
+	</div>
+	<div class="row my_top_2 my_note">
+		<h5><%= 'Notes:' %></h5>
+		<li><%= 'Default building details are set based on DEER (Database for Energy Efficiency Resources) Building Prototypes. You can edit the details in the space, space category and occupant category tabs.' %></li>
+		<li><%= 'Area of Small Office buildings is suggested to be within 5,000 to 50,000 sf, and area of Large Office buildings is suggested to be larger than 50,000 sf.' %></li>
+	</div>
 </div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration: 2015-07-13 18:00:31
+  start_time: 2015-07-13 18:00:31
+  end_time: 2015-07-13 18:00:31
+  prob: 9.99
+
+two:
+  duration: 2015-07-13 18:00:31
+  start_time: 2015-07-13 18:00:31
+  end_time: 2015-07-13 18:00:31
+  prob: 9.99

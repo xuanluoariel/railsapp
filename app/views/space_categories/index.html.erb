@@ -1,48 +1,79 @@
-<div class="container">
-	<ul class="nav nav-tabs my_nav">
-	  <li role="presentation"><%= link_to 'Building input', edit_basic_path(@basic) %></li>
-	  <li role="presentation" class="active"><%= link_to 'Space input', basic_space_categories_path(@basic) %></li>
-	  <li role="presentation"><%= link_to 'Occupant input', basic_occupant_categories_path(@basic)%></li>
-	</ul>
-	<% @basic.space_categories.each_with_index do |space_category, index| %>
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		  <div class="panel panel-default">
-		    <div class="panel-heading" role="tab" id="heading<%= index%>">
-		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index%>" aria-expanded="true" aria-controls="collapse<%= index%>">
-		          <%= space_category.name %>
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapse<%= index%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index%>">
-		      <div class="panel-body">
-		      	<%= form_tag(:controller => :space_categories, :action => :update_space_category, :method => :post, :basic_id=> @basic.id, :id=>space_category.id) do -%>
-							<% if space_category.errors.any? %>
-							  <div class="alert alert-warning" role="alert">
-							    <%= "Error:"%> 
-							    <ul>
-							    <% space_category.errors.full_messages.each do |msg| %>
-							      <li><%= msg %></li>
-							    <% end %>
-							    </ul>
-							  </div>
-							<% end %>
+<% 
+	if params[:id] != nil
+		@basic = Basic.find(params[:id])
+	end 
+%>
+<ul class="nav nav-tabs">
+	<li role="presentation"><%= link_to 'Start new', controller: "basics", action: "welcome", id: @basic %></li>
+  <li role="presentation"><%= link_to 'Spaces', edit_basic_path(@basic) %></li>
+  <li role="presentation" class="active"><%= link_to 'Space Type', basic_space_categories_path(@basic) %></li>
+  <li role="presentation"><%= link_to 'Occupant Type', basic_occupant_categories_path(@basic)%></li>
+  <li role="presentation"><%= link_to 'Simulate', controller: "basics", action: "simulate", id: @basic %></li>
+</ul>
+<div class="bs-callout bs-callout-info my_note">
+	<h5>Notes:</h5>
+	<li>Occupant types defines the common behavior preference of a type of occupants, and can be edited in the Occupant Type tab.</li>
+	<li>Occupants percentage defines the average percentage of a type of occupants in space.</li>
+	<li>Spaces used for meetings and gathering could be defined as meeting room (e.g. Conference room, Lecture room, Dining hall, etc.). </li>
+	<li>Time period of a meeting defines the possible period of time that a meeting occurs, and the probability of a meeting defines the change that a meeting would occur in this period of time. </li>
+</div>
+<div class="bs-callout bs-callout-warning my_note">
+	<div class="page-header space_hearder">
+		<h5>Create a new space type</h5>
+	</div>
+
+	<%= render 'newt' %>
+</div>
+<% @basic.space_categories.each_with_index do |space_category, index| %>
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	  	
+	    <div class="panel-heading" role="tab" id="heading<%= index%>">
+	      <h4 class="panel-title">
+	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index%>" aria-expanded="true" aria-controls="collapse<%= index%>">
+	          <%= space_category.name %>
+	        </a>
+	      </h4>
+	    </div>
+	    
+	    <div id="collapse<%= index%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index%>">
+	      <div class="panel-body">
+	      	<% if session["Space category #{space_category.id} error"] != nil %>
+					  <div class="alert alert-warning" role="alert">
+					    <%= "Error:"%> 
+					    <ul>
+						    <li><%= session["Space category #{space_category.id} error"]  %></li>
+						    <% session["Space category #{space_category.id} error"] = nil %>
+					    </ul>
+					  </div>
+					<% end %>
+	      	<% if space_category.usage == "Office" %>
+		      	<%= form_tag(:controller => :space_categories, :action => :update_space_category_index, :method => :post, :basic_id=> @basic.id, :id=>space_category.id, :anchor=> "heading#{ index}") do -%>
 						  <form>
 						  	<div class="row">
-						  		<div class="col-md-2 col-sm-2 col-xs-2" class="field">
-							  		<%= "Name"%><br>
+						  		<div class="col-md-3 col-sm-4 col-xs-4" class="field">
+							  		<%= label_tag("space_category_name#{space_category.id}", "Name", {:class=> "my_label" })%>
 							  	</div>
-							  	<div class="col-md-2 col-sm-2 col-xs-2" class="field">
-							  		<%= "Density"%><br>
+							  	<div class="col-md-2 col-sm-4 col-xs-4" class="field">
+							  		<%= label_tag("space_category_usage#{space_category.id}", "Usage", {:class=> "my_label" })%>
+							  	</div>
+							  	<div class="col-md-3 col-sm-3 col-xs-3" class="field">
+							  		<%= label_tag("space_category_density#{space_category.id}", "Occupant density (sf/person)", {:class=> "my_label" })%>
 							  	</div>
 						  	</div> 
-								<div class="row">	  
-								  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+								<div class="row">
+										  
+								  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4" class="field">
 								  	<div class="form-group">
 								  		<%= text_field_tag("space_category_name#{space_category.id}", space_category.name, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
 								  	</div>
+								  </div>
+								  <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4" class="field">
+								  	<div class="form-group">
+								  		<%= select_tag("space_category_usage#{space_category.id}", options_for_select([ "Office", "Meeting room", "Other" ],space_category.usage), {:onchange=> "this.form.submit()", :class=> 'my_select'})%>
+								  	</div>
 								  </div>		  	  		  
-								  <div class="col-md-2 col-sm-2 col-xs-2" class="field">
+								  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" class="field">
 								  	<div class="form-group">
 								  		<%= text_field_tag("space_category_density#{space_category.id}", space_category.density, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
 								    </div>
@@ -50,44 +81,138 @@
 								</div>
 							</form>
 						<% end %>
-						<%= form_tag(:controller => :space_categories, :action => :update_occupant, :method => :post, :basic_id=> @basic.id, :id=>space_category.id) do -%>	
+						<%= form_tag(:controller => :space_categories, :action => :update_occupant_index, :method => :post, :basic_id=> @basic.id, :id=>space_category.id, :anchor=> "heading#{ index}") do -%>	
 							<div class = "media">
 								<div class = "media-body">
-									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my_table">
+									<div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 my_table">
 										<table class = "table table-hover">
 										  <thead>
 										    <tr>
-										      <th>Type      </th>
-										      <th>Percentage </th>
-										      <th colspan="2"></th>
+										      <th>Occupant Type  </th>
+										      <th>Percentage (%) </th>
+										      <th colspan="2">   </th>
 										    </tr>
 										  </thead>
 										  <tbody>
-										    <% space_category.occupants.each do |occupant| %>
+										    <% space_category.occupants.each_with_index do |occupant, index| %>
 										      <tr>
 										        <td><%= select_tag("occupant_occupantType#{occupant.id}", options_for_select(@basic.occupant_categories.all, occupant.occupantType), {:onchange=> "this.form.submit()", :class=> 'my_select'}) %></td>
-										        <td><%= text_field_tag("occupant_percentage#{occupant.id}", occupant.percentage, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+										        <% if index < space_category.occupants.length-1  %>
+										        	<td><%= text_field_tag("occupant_percentage#{occupant.id}", occupant.percentage, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+										        <% else %>
+										        	<td><%= label_tag("occupant_percentage#{occupant.id}", occupant.percentage, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+										        <% end %>
 										        <td class = "my_td"><%= link_to "Delete", [occupant.space_category.basic, occupant.space_category, occupant], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-large btn-default"%></td>
 										      </tr>
 										    <% end %>
 										  </tbody>
 										</table>
+										<%= submit_tag "Add occupant group", class: "btn btn-large btn-info my-btn" %>
 									</div>
 								</div>
 							</div>
 						<% end %>
-		      </div>
-		    </div>
-		  </div>
+					<% else %>
+						<%= form_tag(:controller => :space_categories, :action => :update_space_category_index, :method => :post, :basic_id=> @basic.id, :id=>space_category.id,  :anchor=> "heading#{ index}") do -%>
+						  <form>
+						  	<div class="row">
+						  		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" class="field">
+						  			<%= label_tag("space_category_name#{space_category.id}", "Name", {:class=> "my_label" })%>
+							  	</div>
+							  	<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" class="field">
+							  		<%= label_tag("space_category_usage#{space_category.id}", "Usage", {:class=> "my_label" })%>
+							  	</div>
+							  	
+							  	<% if space_category.usage == "Meeting room" %>
+								  	<div class="col-lg-2 col-md-3 col-sm-3 col-xs-2" class="field">
+								  		<%= label_tag("space_category_min_num#{space_category.id}", "Minimum occupant number", {:class=> "my_label" })%>
+								  	</div>
+								  	<div class="col-lg-2 col-md-3 col-sm-3 col-xs-2" class="field">
+								  		<%= label_tag("space_category_max_num#{space_category.id}", "Maximum occupant number", {:class=> "my_label" })%>
+								  	</div>
+								  <% else %>
+								  	<div class="col-lg-3 col-md-4 col-sm-4 col-xs-3" class="field">
+								  		<%= label_tag("space_category_max_num#{space_category.id}", "Maximum occupant number", {:class=> "my_label" })%>
+								  	</div>	
+							  	<% end %>
+						  	</div> 
+								<div class="row">	  
+								  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" class="field">
+								  	<div class="form-group">
+								  		<%= text_field_tag("space_category_name#{space_category.id}", space_category.name, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+								  	</div>
+								  </div>
+								  <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4" class="field">
+								  	<div class="form-group">
+								  		<%= select_tag("space_category_usage#{space_category.id}", options_for_select([ "Office", "Meeting room", "Other" ],space_category.usage), {:onchange=> "this.form.submit()", :class=> 'my_select'})%>
+								  	</div>
+								  </div>		  	  		  
+								  <% if space_category.usage == "Meeting room" %>
+									  <div class="col-lg-2 col-md-3 col-sm-3 col-xs-2" class="field">
+									  	<div class="form-group">
+									  		<%= text_field_tag("space_category_max_num#{space_category.id}", space_category.max_num, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+									    </div>
+									  </div>
+									  <div class="col-lg-2 col-md-3 col-sm-3 col-xs-2" class="field">
+									  	<div class="form-group">
+									  		<%= text_field_tag("space_category_min_num#{space_category.id}", space_category.min_num, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+									    </div>
+									  </div>
+									<% else %>
+										<div class="col-lg-3 col-md-4 col-sm-4 col-xs-3" class="field">
+									  	<div class="form-group">
+									  		<%= text_field_tag("space_category_max_num#{space_category.id}", space_category.max_num, {:onchange=> "this.form.submit()", :class=> "form-control" })%>
+									    </div>
+									  </div>
+								  <% end %>		  		  
+								</div>
+							</form>			
+						<% end %>
+						<% if space_category.usage == "Meeting room" %>
+							<%= form_tag(:controller => :space_categories, :action => :update_meeting_index, :method => :post, :basic_id=> @basic.id, :id=>space_category.id,  :anchor=> "heading#{ index}") do -%>	
+								<div class = "media">
+									<div class = "media-body">
+										<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 my_table">
+											<table class = "table table-hover">
+											  <thead>
+											    <tr>
+											      <th>Time period           </th>
+											      <th>Average Duration (min)</th>
+											      <th>Probability (%)       </th>
+											      <th colspan="1">          </th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <% space_category.meetings.each do |meeting| %>
+											      <tr>
+											      	<% @time_range_list = ["Morning (9am-12pm)", "Noon (12pm-2pm)", "Afternoon (2pm-6pm)", "Evening (6pm-9pm)"]%>
+						        					<td><%= select_tag("meeting_time_range#{meeting.id}", options_for_select(@time_range_list, meeting.time_range), {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+						        					<td><%= text_field_tag("meeting_duration#{meeting.id}", meeting.duration, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+						        					<td><%= text_field_tag("meeting_prob#{meeting.id}", meeting.prob, {:onchange=> "this.form.submit()", :class=> "form-control" })%></td>
+						        					<td><%= link_to "Delete", [meeting.space_category.basic, meeting.space_category, meeting], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-large btn-default"%></td>
+						        				</tr>
+											    <% end %>
+											  </tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<%= submit_tag "Add meeting", class: "btn btn-large btn-info my-btn" %>
+							<% end %>
+						<% end %>
+					<% end %>
+	      </div>
+	    </div>
 	  </div>
-	<% end %>
-	<div class="row">
-  	<div class="col-md-2 col-sm-2 col-xs-2" class="field">
-			<%= link_to "Back", edit_basic_path(@basic), class: "btn btn-large btn-default my_btn" %>
-		</div>
-		<div class="col-md-9 col-sm-9 col-xs-9" class="field"></div>
-		<div class="col-md-1 col-sm-1 col-xs-1" class="field">
-			<%= link_to 'Continue', basic_occupant_categories_path(@basic), class: "btn btn-large btn-primary my_btn right" %>
-		</div>
+  </div>
+<% end %>
+<div class="row">
+	<div class="col-md-2 col-sm-2 col-xs-2" class="field">
+		<%= link_to "Back", edit_basic_path(@basic), class: "btn btn-large btn-default my_top_2" %>
+	</div>
+	<div class="col-md-9 col-sm-9 col-xs-9" class="field"></div>
+	<div class="col-md-1 col-sm-1 col-xs-1" class="field">
+		<%= link_to 'Continue', basic_occupant_categories_path(@basic), class: "btn btn-large btn-primary my_top_2 my_right" %>
 	</div>
 </div>
+
